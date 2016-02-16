@@ -29,6 +29,12 @@ Rails.application.configure do
   # yet still be able to expire them through the digest params.
   config.assets.digest = true
 
+  # config.middleware.use ActionCableWebsocket
+  config.action_cable.url = 'wss://glacial-taiga-57884.herokuapp.com/cable'
+  config.action_cable.allowed_request_origins = [ 'https://glacial-taiga-57884.herokuapp.com', /http:\/\/glacial-taiga-57884.herokuapp.*/ ]
+
+  config.log_level = :debug
+
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.

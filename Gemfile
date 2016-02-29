@@ -32,6 +32,9 @@ gem 'redis', '~> 3.0'
 gem 'devise', :git => "https://github.com/plataformatec/devise.git", :branch => "master"
 gem 'omniauth-github'
 
+# Octokit for GitHub access
+gem 'octokit'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

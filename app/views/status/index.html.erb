@@ -1,0 +1,6 @@
+<h2>Status Creator</h2>
+
+<%= form_tag("/status/create", method: "post") do %>
+  <%= text_field_tag(:sha) %>
+  <%= submit_tag("Create") %>
+<% end %>

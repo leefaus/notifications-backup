@@ -1,0 +1,4 @@
+<h2>Status Create</h2>
+<h3>Acting As: <%= @client.user.login %></h3>
+<h3>Current Status of <%= @sha %></h3>
+<%= @client.statuses "development/notifications", @sha %>

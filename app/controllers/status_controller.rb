@@ -14,7 +14,7 @@ class StatusController < ApplicationController
 
   def connect
     Octokit.configure do |c|
-      c.api_endpoint = "https://ec2-52-90-93-65.compute-1.amazonaws.com/api/v3/"
+      c.api_endpoint = "https://ec2-54-194-237-229.eu-west-1.compute.amazonaws.com/api/v3/"
       # allow self signed cert https
       c.connection_options[:ssl] = { :verify => false }
     end

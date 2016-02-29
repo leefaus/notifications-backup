@@ -273,4 +273,5 @@ Devise.setup do |config|
         :token_url => 'https://github.YOURDOMAIN.com/login/oauth/access_token',
       }
     }
+  OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 end

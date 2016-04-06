@@ -265,12 +265,12 @@ Devise.setup do |config|
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
-  config.omniauth :github, 'fd11762abeb5810cfd45', 'b0f724706020998e68c912840309a2fa1fd09ec3', {
+  config.omniauth :github, 'e9bcb3554d05b338d712', 'c63376ffac7167334589ad460a4649d768188ec1', {
       :scope => 'user:email, repo, gist, public_repo',
       :client_options => {
-        :site => 'https://ec2-54-194-237-229.eu-west-1.compute.amazonaws.com/api/v3',
-        :authorize_url => 'https://ec2-54-194-237-229.eu-west-1.compute.amazonaws.com/login/oauth/authorize',
-        :token_url => 'https://ec2-54-194-237-229.eu-west-1.compute.amazonaws.com/login/oauth/access_token',
+        :site => 'https://ec2-52-90-93-65.compute-1.amazonaws.com/api/v3',
+        :authorize_url => 'https://ec2-52-90-93-65.compute-1.amazonaws.com/login/oauth/authorize',
+        :token_url => 'https://ec2-52-90-93-65.compute-1.amazonaws.com/login/oauth/access_token',
       }
     }
   OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE

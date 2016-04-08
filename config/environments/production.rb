@@ -30,8 +30,8 @@ Rails.application.configure do
   config.assets.digest = true
 
   # config.middleware.use ActionCableWebsocket
-  config.action_cable.url = 'wss://glacial-taiga-57884.herokuapp.com/cable'
-  config.action_cable.allowed_request_origins = [ 'https://glacial-taiga-57884.herokuapp.com', /http:\/\/glacial-taiga-57884.herokuapp.*/, /http:\/\/*/, /https:\/\/*/  ]
+  config.action_cable.url = 'wss://powerful-mountain-88762.herokuapp.com/cable'
+  config.action_cable.allowed_request_origins = [ 'https://powerful-mountain-88762.herokuapp.com', /http:\/\/powerful-mountain-88762.herokuapp.*/, /http:\/\/*/, /https:\/\/*/  ]
 
   config.log_level = :debug
 

@@ -6,6 +6,8 @@ To get started:
 
 - Create a Heroku account
 - Install the [Heroku Toolbelt CLI](https://toolbelt.heroku.com/)
+
+** From a Terminal**
 - `heroku login`
 - `git clone https://github.com/leefaus/notifications`
 

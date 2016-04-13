@@ -49,9 +49,10 @@ To get started:
 - `git commit -a -m "modify URLs"`
 - `git push --force heroku oauth-example:master`
 - `heroku run rails db:migrate`
-- Open a browser and point to `https://<HEROKU_URL>/users/sign_in`
-- Click the `Sign In with GitHub` link
+- Open a browser and point to `https://<HEROKU_URL>/`
+- Click the `Sign In via GitHub` button in the right hand corner
   - You should be redirected to either GitHub.com or GitHub Enterprise
   - Authorize the application 
+  - Click the `Sign Out` button
   - **Done...**
 

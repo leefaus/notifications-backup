@@ -236,7 +236,7 @@ Devise.setup do |config|
   # config.navigational_formats = ['*/*', :html]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
-  config.sign_out_via = :delete
+  config.sign_out_via = :get
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
@@ -265,12 +265,14 @@ Devise.setup do |config|
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
-  config.omniauth :github, 'CLIENT_ID', 'APP_SECRET', {
+  # Heroku Application: powerful-mountain-88762
+  config.omniauth :github, ENV["github_client_id"], ENV["github_application_secret"], {
       :scope => 'user:email, repo, gist, public_repo',
       :client_options => {
-        :site => 'https://github.YOURDOMAIN.com/api/v3',
-        :authorize_url => 'https://github.YOURDOMAIN.com/login/oauth/authorize',
-        :token_url => 'https://github.YOURDOMAIN.com/login/oauth/access_token',
+        :site => "https://#{ENV['github_enterprise_url']}/api/v3",
+        :authorize_url => "https://#{ENV['github_enterprise_url']}/login/oauth/authorize",
+        :token_url => "https://#{ENV['github_enterprise_url']}/login/oauth/access_token",
       }
     }
+  # OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 end

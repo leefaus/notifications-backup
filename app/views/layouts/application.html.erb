@@ -23,6 +23,11 @@
       <div class="navbar navbar-light bg-faded navbar-static-top">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header">
           <span class="mega-octicon octicon-mark-github"></span>
+          <% if user_signed_in? %>
+          <button type="button" class="btn btn-primary-outline btn-sm sign-out"><%= link_to 'Sign Out', destroy_user_session_path %></button>
+          <% else %>
+          <button type="button" class="btn btn-primary-outline btn-sm sign-out"><%= link_to 'Sign In via GitHub', '/users/auth/github' %></button>
+          <% end %>
         </button>
       </div>
     </div>

@@ -267,12 +267,12 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
   # Heroku Application: powerful-mountain-88762
   config.omniauth :github, ENV["github_client_id"], ENV["github_application_secret"], {
-      :scope => 'user:email, repo, gist, public_repo',
+      :scope => 'user:email, repo, gist',
       :client_options => {
         :site => "https://#{ENV['github_enterprise_url']}/api/v3",
         :authorize_url => "https://#{ENV['github_enterprise_url']}/login/oauth/authorize",
         :token_url => "https://#{ENV['github_enterprise_url']}/login/oauth/access_token",
       }
     }
-  # OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+  OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 end

@@ -56,3 +56,25 @@ To get started:
   - Click the `Sign Out` button
   - **Done...**
 
+### API Example
+
+**Setup and Deploying**
+
+- Create a [**Personal Access Token**](https://help.github.com/articles/creating-an-access-token-for-command-line-use/)
+- `git checkout api-example`
+- `bundle install`
+- `bundle exec figaro install`
+- Create the following key/value pairs corresponding to your install in the `config/application.yml`
+  - `github_client_id: <value>`
+  - `github_application_secret: <value>`
+  - `github_enterprise_url: <value>`
+  - `github_oauth_personal_token: <value>`
+  - `heroku_application: <value>`
+- `figaro heroku:create`
+- `git commit -a -m "figaro environment variables"`
+- `git push --force api-example:master`
+- Open a browser to `https://<HEROKU_URL>/status`
+- _Login to GitHub if required_
+- Create a commit and pull request in GitHub
+  - Copy the SHA from GitHub and paste it into the status field in your Heroku application
+  - Click the `Create` button

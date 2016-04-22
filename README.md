@@ -44,7 +44,6 @@ To get started:
   - `github_client_id: <value>`
   - `github_application_secret: <value>`
   - `github_enterprise_url: <value>`
-  - `github_oauth_personal_token: <value>`
   - `heroku_application: <value>`
 - `figaro heroku:create`
 - `git commit -a -m "figaro environment variables"`

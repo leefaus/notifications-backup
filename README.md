@@ -38,15 +38,16 @@ To get started:
 - `git checkout oauth-example`
 - Login to GitHub.com or GitHub Enterprise
 - [Create a new Oauth Application](https://help.github.com/enterprise/admin/guides/user-management/using-github-oauth/)
-  - The **Homepage URL** should be your **HEROKU_URL**
-  - The **Authorization Callback URL** should be `https://<HEROKU_URL>/users/auth/github/callback`
-- Once the application is created, copy the `CLIENT_ID` AND `CLIENT_SECRET`
-  - Edit `config/initializers/devise.rb`
-  - Replace the `CLIENT_ID`
-  - Replace the `CLEINT_SECRET`
-    - With GitHub Enterprise, put your GitHub Enterprise Server URL in the corresponding locations
-    - With GitHub.com, remove the `client_options` section
-- `git commit -a -m "modify URLs"`
+- `bundle install`
+- `bundle exec figaro install`
+- Create the following key/value pairs corresponding to your install in the `config/application.yml`
+  - `github_client_id: <value>`
+  - `github_application_secret: <value>`
+  - `github_enterprise_url: <value>`
+  - `github_oauth_personal_token: <value>`
+  - `heroku_application: <value>`
+- `figaro heroku:create`
+- `git commit -a -m "figaro environment variables"`
 - `git push --force heroku oauth-example:master`
 - `heroku run rails db:migrate`
 - Open a browser and point to `https://<HEROKU_URL>/`

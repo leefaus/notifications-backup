@@ -3,7 +3,7 @@
 This is a set of **Ruby/Rails** example applications GitHub uses during their _1 day_ partner enablement.  These applications are **WIP**, so leverage at your own risk.
 
 To get started:
-- Install Ruby > 2.2.4
+- Install Ruby gte 2.2.4
 - `gem install bundler`
 - Create a Heroku account
 - Install the [Heroku Toolbelt CLI](https://toolbelt.heroku.com/)

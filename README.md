@@ -49,7 +49,7 @@ To get started:
   - `github_application_secret: <value>`
   - `github_enterprise_url: <value>`
   - `heroku_application: <value>`
-- `figaro heroku:create`
+- `figaro heroku:set`
 - `git commit -a -m "figaro environment variables"`
 - `git push --force heroku oauth-example:master`
 - `heroku run rails db:migrate`

@@ -42,6 +42,8 @@ To get started:
 - The **Homepage URL** should be your **HEROKU_URL**
 - The **Authorization Callback URL** should be `https://<HEROKU_URL>/users/auth/github/callback`
 - Once the application is created, save the `client_id` AND `client_secret` to be used later in the `application.yml`
+- `brew update`
+- `brew install postgresql`
 - `bundle install`
 - `bundle exec figaro install`
 - Create the following key/value pairs corresponding to your install in the `config/application.yml`

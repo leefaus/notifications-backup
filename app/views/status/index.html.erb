@@ -4,3 +4,18 @@
   <%= text_field_tag(:sha) %>
   <%= submit_tag("Create") %>
 <% end %>
+
+<h1>Status Builder</h1>
+<% @commit_builder.each do |cb| %>
+  <h3>SHA: <h3><%= cb[:sha] %></br>
+  <h3>Author: <h3><%= cb[:author] %></br>
+  <h3>Committer: <h3><%= cb[:committer] %></br>
+  <h3>Message: <h3><%= cb[:message] %></br>
+  <h3>Statuses</h3>
+  <% cb[:statuses].each do |s| %>
+    <h5>Context: </h5><%= s.context %></br>
+    <h5>Status: </h5><%= s.state %></br>
+    <h5>Description: </h5><%= s.description %></br>
+    <h5>URL: </h5><%= s.target_url %></br>
+  <% end %>
+<% end %>

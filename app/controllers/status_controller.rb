@@ -23,11 +23,11 @@ class StatusController < ApplicationController
     @client = self.connect
     repository = "republic/calculator"
     branch = "master"
-    status_builder = Hash.new
     @commit_builder = Array.new
     commits = @client.commits(repository, branch )
     # puts "COMMITS #{commits.inspect}"
     commits.each do |c|
+      status_builder = Hash.new
       status_builder[:sha] = c.sha
       status_builder[:author] = c.commit.author.name
       status_builder[:committer] = c.commit.committer.name
